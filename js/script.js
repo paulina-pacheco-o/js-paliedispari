@@ -1,13 +1,20 @@
 //PALINDROMA
 const word = prompt(`Inserisci una parola`);
 
-function paliWord() {
-  if (word === word.reverse()) {
-    console.log(`Questa è una parola palindroma`)
+function paliWord(parola) {
+  const parolaInvertita = parola.split("").reverse().join("")
+  if (parola === parolaInvertita) {
+    return true
   }
   else {
-    console.log(`Questa non è una parola palindroma`)
+    return false
   }
 }
 
-paliWord();
+const check = paliWord(word)
+if (check) {
+  console.log(`Questa parola è palindroma`)
+}
+else {
+  console.log(`Questa parola non è palindroma`)
+}
