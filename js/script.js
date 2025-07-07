@@ -3,12 +3,8 @@ const word = prompt(`Inserisci una parola`);
 
 function paliWord(parola) {
   const parolaInvertita = parola.split("").reverse().join("")
-  if (parola === parolaInvertita) {
-    return true
-  }
-  else {
-    return false
-  }
+  const result = parola === parolaInvertita
+  return result
 }
 
 const check = paliWord(word)
