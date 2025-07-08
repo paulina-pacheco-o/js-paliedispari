@@ -17,10 +17,18 @@
 
 
 //PARI E DISPARI
+const evenOrOdd = prompt(`Scegli pari o dispari`);
 const userNumber = parseInt(prompt(`Insersci un numero da 1 a 5`));
 
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1));
 }
+
+function sum(userNumber, generateRandomNumber) {
+  return userNumber + generateRandomNumber
+}
+
+sum()
+console.log(sum(userNumber, generateRandomNumber));
 
 console.log(generateRandomNumber(1, 5));
